@@ -1,0 +1,9 @@
+ID;name;city;creditLimit;openItems;blocked;newCustomer
+C1001;Hansen Metallbau GmbH;Kiel;20000;4000;false;false
+C1002;Brandt Elektrotechnik KG;Hamburg;15000;14200;false;false
+C1003;Werkstatt Oberhavel e.K.;Oranienburg;8000;0;false;true
+C1004;Kuehne Haustechnik GmbH;Luebeck;30000;2500;false;false
+C1005;Petersen Bau AG;Rostock;50000;12000;false;false
+C1006;Alt-Schwerin Fahrzeugbau GmbH;Schwerin;10000;0;true;false
+C1007;Nordwerft Service GmbH;Bremerhaven;25000;3000;false;false
+C1008;Jansen Facility Services GmbH;Flensburg;12000;1000;false;false

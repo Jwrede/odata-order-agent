@@ -1,0 +1,21 @@
+{
+ "claude_version": "2.1.332 (Claude Code)",
+ "cost_usd": 0.00031979,
+ "duration_ms": 2339,
+ "effort": null,
+ "key": "9160c7e720df0f42",
+ "mail_id": "kh-04",
+ "model": "haiku",
+ "num_turns": 2,
+ "output": {
+  "action": "no_order",
+  "order_id": null,
+  "reason": "Mail kh-04 asks to cancel existing order B-2026-1102. Cancellations and changes to existing orders are not new purchase orders, so no sales order was created.",
+  "uncertainties": []
+ },
+ "resolved_models": [
+  "claude-haiku-5-5"
+ ],
+ "tool_calls": [],
+ "wall_ms": 4298
+}

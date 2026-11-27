@@ -1,0 +1,52 @@
+{
+  "name": "nordlicht-orders",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SAP CAP order service of a fictitious wholesaler (OData V4), used as the ERP side of odata-order-agent",
+  "license": "MIT",
+  "dependencies": {
+    "@sap/cds": "^10",
+    "@cap-js/sqlite": "^3",
+    "express": "^4"
+  },
+  "scripts": {
+    "start": "cds-serve"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "url": ":memory:"
+        }
+      },
+      "auth": {
+        "kind": "mocked",
+        "users": {
+          "agent": {
+            "password": "agent",
+            "roles": [
+              "OrderAgent"
+            ]
+          },
+          "gate": {
+            "password": "gate",
+            "roles": [
+              "AutoRelease"
+            ]
+          },
+          "approver": {
+            "password": "approver",
+            "roles": [
+              "Approver"
+            ]
+          },
+          "viewer": {
+            "password": "viewer",
+            "roles": []
+          }
+        }
+      }
+    }
+  }
+}

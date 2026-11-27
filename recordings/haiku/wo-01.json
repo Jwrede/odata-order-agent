@@ -1,0 +1,124 @@
+{
+ "claude_version": "2.1.332 (Claude Code)",
+ "cost_usd": 0.00105495,
+ "duration_ms": 6875,
+ "effort": null,
+ "key": "064c1126ff368e36",
+ "mail_id": "wo-01",
+ "model": "haiku",
+ "num_turns": 6,
+ "output": {
+  "action": "order_created",
+  "order_id": "a84030f3-426d-4788-bb84-89e99dea3564",
+  "reason": "Sender matched customer C1003 (Werkstatt Oberhavel e.K., not blocked) and the mail gives PO WO-001. Both lines matched exact product IDs; the order was created as Proposed with net amount EUR 149.30 at ERP list prices and no delivery date.",
+  "uncertainties": [
+   "Customer is flagged as new in the ERP (first order); the reviewer may want to confirm the account before release.",
+   "The mail says 'Karton' for HS-NIT-L; the product's sales unit is CT and was ordered as 2 units. This matches the mail's count, but the reviewer may want to confirm that a carton equals one sales unit."
+  ]
+ },
+ "resolved_models": [
+  "claude-haiku-5-5"
+ ],
+ "tool_calls": [
+  {
+   "args": {
+    "email": "info@werkstatt-oberhavel.example"
+   },
+   "error": false,
+   "result": {
+    "customer": {
+     "ID": "C1003",
+     "blocked": false,
+     "city": "Oranienburg",
+     "name": "Werkstatt Oberhavel e.K.",
+     "newCustomer": true
+    },
+    "found": true
+   },
+   "tool": "lookup_sender"
+  },
+  {
+   "args": {
+    "query": "HS-NIT-L"
+   },
+   "error": false,
+   "result": [
+    {
+     "ID": "HS-NIT-L",
+     "description": "puderfrei, 10 Spender zu 100 Stueck",
+     "discontinued": false,
+     "listPrice": "54.90",
+     "name": "Nitril-Einweghandschuhe blau Gr. L",
+     "packSize": 1000,
+     "stock": 120,
+     "unit": "CT"
+    }
+   ],
+   "tool": "search_products"
+  },
+  {
+   "args": {
+    "query": "SB-KLAR"
+   },
+   "error": false,
+   "result": [
+    {
+     "ID": "SB-KLAR",
+     "description": "kratzfest, 10 Stueck je Pack",
+     "discontinued": false,
+     "listPrice": "39.50",
+     "name": "Schutzbrille klar EN 166",
+     "packSize": 10,
+     "stock": 40,
+     "unit": "PAC"
+    }
+   ],
+   "tool": "search_products"
+  },
+  {
+   "args": {
+    "customer_id": "C1003",
+    "customer_reference": "WO-001",
+    "items": [
+     {
+      "product_id": "HS-NIT-L",
+      "quantity": 2
+     },
+     {
+      "product_id": "SB-KLAR",
+      "quantity": 1
+     }
+    ],
+    "note": "First order from new customer (mail 2026-11-27, subject \"Erste Bestellung\"). Lines: 2 Karton HS-NIT-L (sales unit CT, 2 units), 1 Pack SB-KLAR (sales unit PAC, 1 unit). No price terms stated in mail; ERP list prices apply. No delivery date given.",
+    "requested_date": null
+   },
+   "error": false,
+   "result": {
+    "ID": "<uuid>",
+    "customerReference": "WO-001",
+    "customer_ID": "C1003",
+    "items": [
+     {
+      "netAmount": "109.80",
+      "pos": 10,
+      "product_ID": "HS-NIT-L",
+      "quantity": 2,
+      "unitPrice": "54.90"
+     },
+     {
+      "netAmount": "39.50",
+      "pos": 20,
+      "product_ID": "SB-KLAR",
+      "quantity": 1,
+      "unitPrice": "39.50"
+     }
+    ],
+    "netAmount": "149.30",
+    "requestedDate": null,
+    "status": "Proposed"
+   },
+   "tool": "create_sales_order"
+  }
+ ],
+ "wall_ms": 8892
+}

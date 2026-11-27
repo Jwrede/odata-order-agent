@@ -1,0 +1,31 @@
+ID;name;description;unit;packSize;listPrice;stock;discontinued
+HS-NIT-S;Nitril-Einweghandschuhe blau Gr. S;puderfrei, 10 Spender zu 100 Stueck;CT;1000;54.90;120;false
+HS-NIT-M;Nitril-Einweghandschuhe blau Gr. M;puderfrei, 10 Spender zu 100 Stueck;CT;1000;54.90;120;false
+HS-NIT-L;Nitril-Einweghandschuhe blau Gr. L;puderfrei, 10 Spender zu 100 Stueck;CT;1000;54.90;120;false
+HS-NIT-XL;Nitril-Einweghandschuhe blau Gr. XL;puderfrei, 10 Spender zu 100 Stueck;CT;1000;54.90;60;false
+HS-LED-9;Arbeitshandschuhe Rindnappaleder Gr. 9;12 Paar je Pack;PAC;12;46.80;30;false
+HS-LED-10;Arbeitshandschuhe Rindnappaleder Gr. 10;12 Paar je Pack;PAC;12;46.80;30;false
+SB-KLAR;Schutzbrille klar EN 166;kratzfest, 10 Stueck je Pack;PAC;10;39.50;40;false
+SB-GETOENT;Schutzbrille getoent EN 172;UV-Schutz, 10 Stueck je Pack;PAC;10;44.00;25;false
+GS-STOEPSEL-200;Gehoerschutzstoepsel SNR 37 dB;Spenderbox mit 200 Paar;PC;1;32.90;50;false
+WW-GELB-L;Warnweste gelb EN ISO 20471 Kl. 2 Gr. L;10 Stueck je Pack;PAC;10;29.90;40;false
+WW-GELB-XL;Warnweste gelb EN ISO 20471 Kl. 2 Gr. XL;10 Stueck je Pack;PAC;10;29.90;40;false
+WW-GELB-XXL;Warnweste gelb EN ISO 20471 Kl. 2 Gr. XXL;10 Stueck je Pack;PAC;10;29.90;40;false
+KB-200-SW;Kabelbinder 200 x 4,8 mm schwarz;UV-bestaendig, 100 Stueck je Pack;PAC;100;6.40;300;false
+KB-200-WS;Kabelbinder 200 x 4,8 mm weiss;100 Stueck je Pack, Auslaufartikel;PAC;100;6.10;0;true
+KB-300-SW;Kabelbinder 300 x 4,8 mm schwarz;UV-bestaendig, 100 Stueck je Pack;PAC;100;9.20;300;false
+KB-300-NAT;Kabelbinder 300 x 4,8 mm natur;100 Stueck je Pack;PAC;100;8.10;300;false
+SR-4X40-VZ;Spanplattenschraube 4,0 x 40 TX20 verzinkt;Senkkopf, 500 Stueck je Pack;PAC;500;11.90;200;false
+SR-4X40-ED;Spanplattenschraube 4,0 x 40 TX20 Edelstahl A2;Senkkopf, 200 Stueck je Pack;PAC;200;18.70;80;false
+SR-5X60-VZ;Spanplattenschraube 5,0 x 60 TX25 verzinkt;Senkkopf, 200 Stueck je Pack;PAC;200;12.50;200;false
+SR-6X80-VZ;Spanplattenschraube 6,0 x 80 TX30 verzinkt;Senkkopf, 100 Stueck je Pack;PAC;100;13.80;150;false
+BB-HSS-SET19;HSS-G Metallbohrer-Satz 1-10 mm;19-teilig in Metallkassette;PC;1;34.90;35;false
+BB-HSS-8;HSS-G Metallbohrer 8,0 mm;10 Stueck je Pack;PAC;10;27.50;40;false
+TS-115-INOX;Trennscheibe 115 x 1,0 mm Inox;25 Stueck je Pack;PAC;25;27.50;60;false
+TS-125-INOX;Trennscheibe 125 x 1,0 mm Inox;25 Stueck je Pack;PAC;25;31.25;8;false
+FS-125-K80;Faecherschleifscheibe 125 mm Koernung 80;10 Stueck je Pack;PAC;10;38.00;45;false
+KL-MONTAGE-290;Montagekleber 290 ml;Kartusche;PC;1;7.40;400;false
+SI-SAN-WEISS;Sanitaer-Silikon weiss 310 ml;Kartusche;PC;1;5.90;500;false
+SI-SAN-TRANSP;Sanitaer-Silikon transparent 310 ml;Kartusche;PC;1;5.90;500;false
+PT-BLAU-50;Putzpapier blau 2-lagig;Rolle mit 1000 Blatt;PC;1;24.90;80;false
+AB-ISO-19;Isolierband PVC 19 mm x 20 m schwarz;10 Rollen je Pack;PAC;10;8.90;150;false

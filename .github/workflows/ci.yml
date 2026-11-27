@@ -1,0 +1,47 @@
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "29 6 * * 1"
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.10", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: CAP order service (npm ci)
+        working-directory: cap
+        run: npm ci --no-audit --no-fund
+      - run: pip install -e .[dev]
+      - name: evaluation mails are generated from eval/make_mails.py
+        run: |
+          cp eval/mails.jsonl /tmp/mails.jsonl
+          python eval/make_mails.py
+          cmp eval/mails.jsonl /tmp/mails.jsonl
+      - name: tests (gate, scoring, CAP roles and rules over OData, MCP server, replay)
+        run: pytest -v
+      - name: measurement replay against the CAP service must reproduce the committed results
+        run: |
+          order-agent measure --mode replay --model haiku --model sonnet --model opus --out /tmp/results
+          diff -u results/summary.json /tmp/results/summary.json
+          for f in results/*.jsonl; do diff -u "$f" "/tmp/results/$(basename "$f")"; done
+      - name: fault injection against ERP rules and gate must reproduce the committed results
+        run: |
+          order-agent faults --out /tmp/faults.jsonl
+          diff -u results/faults.jsonl /tmp/faults.jsonl
+      - name: example (one mail replayed through agent, gate and approval)
+        run: scripts/example.sh

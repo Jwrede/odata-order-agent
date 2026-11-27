@@ -1,0 +1,88 @@
+{
+ "business_date": "2026-11-27",
+ "effort": "default",
+ "mails": 35,
+ "models": {
+  "haiku": {
+   "auto_release_ideal": 9,
+   "auto_released": 2,
+   "auto_released_correct_orders": 2,
+   "correct": 35,
+   "correct_by_kind": {
+    "clarify": "5/5",
+    "no_order": "11/11",
+    "order": "19/19"
+   },
+   "cost_per_correct_usd": 0.001,
+   "cost_per_mail_usd": 0.001,
+   "cost_usd": 0.0358,
+   "critical_released_wrong": 0,
+   "errors": 0,
+   "human_review": 17,
+   "mean_tool_calls": 3.86,
+   "median_duration_s": 7.1,
+   "route_matches_ideal": 12,
+   "total": 35,
+   "without_agent_doubt_rule": {
+    "auto_released": 9,
+    "auto_released_correct_orders": 9,
+    "critical_released_wrong": 0
+   },
+   "wrong_proposals": 0
+  },
+  "opus": {
+   "auto_release_ideal": 9,
+   "auto_released": 7,
+   "auto_released_correct_orders": 7,
+   "correct": 35,
+   "correct_by_kind": {
+    "clarify": "5/5",
+    "no_order": "11/11",
+    "order": "19/19"
+   },
+   "cost_per_correct_usd": 0.0316,
+   "cost_per_mail_usd": 0.0316,
+   "cost_usd": 1.1066,
+   "critical_released_wrong": 0,
+   "errors": 0,
+   "human_review": 12,
+   "mean_tool_calls": 3.03,
+   "median_duration_s": 11.0,
+   "route_matches_ideal": 17,
+   "total": 35,
+   "without_agent_doubt_rule": {
+    "auto_released": 9,
+    "auto_released_correct_orders": 9,
+    "critical_released_wrong": 0
+   },
+   "wrong_proposals": 0
+  },
+  "sonnet": {
+   "auto_release_ideal": 9,
+   "auto_released": 8,
+   "auto_released_correct_orders": 8,
+   "correct": 35,
+   "correct_by_kind": {
+    "clarify": "5/5",
+    "no_order": "11/11",
+    "order": "19/19"
+   },
+   "cost_per_correct_usd": 0.0142,
+   "cost_per_mail_usd": 0.0142,
+   "cost_usd": 0.4977,
+   "critical_released_wrong": 0,
+   "errors": 0,
+   "human_review": 11,
+   "mean_tool_calls": 2.94,
+   "median_duration_s": 5.1,
+   "route_matches_ideal": 18,
+   "total": 35,
+   "without_agent_doubt_rule": {
+    "auto_released": 9,
+    "auto_released_correct_orders": 9,
+    "critical_released_wrong": 0
+   },
+   "wrong_proposals": 0
+  }
+ }
+}

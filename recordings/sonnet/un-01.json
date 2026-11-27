@@ -1,0 +1,32 @@
+{
+ "claude_version": "2.1.332 (Claude Code)",
+ "cost_usd": 0.007005,
+ "duration_ms": 3247,
+ "effort": null,
+ "key": "5a0d46410b7fd11f",
+ "mail_id": "un-01",
+ "model": "sonnet",
+ "num_turns": 3,
+ "output": {
+  "action": "no_order",
+  "order_id": null,
+  "reason": "The sender einkauf@handwerk-mail.example is not known in the ERP, so no order was created. The mail asks for 10 Karton HS-NIT-L (PO 4500012399) and names Hansen Metallbau GmbH, Kiel, for invoicing, but the customer cannot be taken from the mail text; please verify the sender manually.",
+  "uncertainties": []
+ },
+ "resolved_models": [
+  "claude-sonnet-5-5"
+ ],
+ "tool_calls": [
+  {
+   "args": {
+    "email": "einkauf@handwerk-mail.example"
+   },
+   "error": false,
+   "result": {
+    "found": false
+   },
+   "tool": "lookup_sender"
+  }
+ ],
+ "wall_ms": 5442
+}
