@@ -38,7 +38,7 @@ jobs:
         run: |
           order-agent measure --mode replay --model haiku --model sonnet --model opus --out /tmp/results
           diff -u results/summary.json /tmp/results/summary.json
-          for f in results/*.jsonl; do diff -u "$f" "/tmp/results/$(basename "$f")"; done
+          for m in haiku sonnet opus; do diff -u "results/$m.jsonl" "/tmp/results/$m.jsonl"; done
       - name: fault injection against ERP rules and gate must reproduce the committed results
         run: |
           order-agent faults --out /tmp/faults.jsonl
